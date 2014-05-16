@@ -1,0 +1,28 @@
+# =[ CUSTOM BASH PROMPT ]= #
+function my_prompt()
+{
+  local DIRARR
+  local STR_DIR
+  IFS="/" read -a DIRARR <<< "$(pwd | rev)"
+  for ((I=0; I<${#DIRARR[@]}; I++)); do
+    if [ $I -lt 4 ]; then
+      STR_DIR=$STR_DIR${DIRARR[$I]}"/"
+    fi
+  done
+  STR_DIR=$(echo "$STR_DIR" | rev)
+  if [ ${#DIRARR[@]} -ge 5 ]; then
+    local DIRS_UP=$((${#DIRARR[@]} - 4))
+    STR_DIR="($DIRS_UP).."$STR_DIR
+  fi
+
+  local STR_VIEW
+  local STR_PATH="$CYELLOWB$STR_DIR"
+
+  if [ "a$CTVIEW" == "a" ]; then
+    STR_VIEW="$CREDB[$CREDL\$ cleartool setview -login $CTVIEWPRE$CREDLB<YYMMDD>$CREDB]"
+  else
+    STR_VIEW="$CCYAN$CTVIEW$CWHITEB: "
+  fi
+  export PS1="$STR_VIEW$STR_PATH$CDEFAULT\n-> "
+}
+export PROMPT_COMMAND=my_prompt
