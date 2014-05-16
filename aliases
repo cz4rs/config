@@ -1,0 +1,7 @@
+alias l='ls --color'
+alias ls='ls --color'
+alias ll='ls --color -lX'
+alias la='ls -Al'
+alias f='find . -name'
+alias x=exit
+alias ..='cd ..'
