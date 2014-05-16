@@ -1,0 +1,29 @@
+
+ hardstatus on
+ hardstatus alwayslastline
+ hardstatus string '%{= g}[ %{G}%H %{g}][%= %{W}%?%-Lw%?%{r}(%{Y}%n*%f%t%?(%u)%?%{r})%{W}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+ vbell off
+ defscrollback 8192
+ autodetach on
+ startup_message off
+
+ # only K kills the session
+ bind k
+ bind ^k
+ bind \\
+ bind K kill
+
+ # bind <F7> to detach screen from terminal
+ bindkey -k k7 detach
+ # bind <F8> to rename existing window
+ bindkey -k k8 title
+ # bind <F9> to jump to previous window
+ bindkey -k k9 prev
+ bindkey ^[[d prev
+ # bind <F10> to jump to next window
+ bindkey -k k; next
+ bindkey ^[[c next
+
+ termcapinfo xterm*|rxvt* ti@:te@
+ term xterm
+
