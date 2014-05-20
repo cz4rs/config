@@ -8,7 +8,7 @@ set tabstop=4
 set shiftwidth=4
 
 " spaces instead of tabs
-set noexpandtab
+set expandtab
 
 " guess indentation
 set autoindent
@@ -64,7 +64,7 @@ set autowrite
 set noswapfile
 
 " enable mouse scroll and visual selection
-set mouse=a
+"set mouse=a
 " set minimum window height to 0 (takes less space)
 set wmh=0
 
@@ -92,19 +92,6 @@ autocmd BufReadPost *
 
 " changed mappings
 noremap ; :
-"nmap <F2> :TagbarToggle<CR>
-"imap <C-Space> <C-x><C-o>
-
-
-" codebase browsing configuration
-" set tags=/user/c.skrzynski/tags
-
-"source ~/cscope/cscope_maps.vim
-"if has("cscope")
-"    set nocscopeverbose
-"    cs add ~/cscope/test.out
-"    set cscopeverbose
-"endif
 
 " show current function name
 fun! ShowFuncName()
