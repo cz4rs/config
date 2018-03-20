@@ -4,8 +4,8 @@
     show = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less -r
     diff = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less -r
 [user]
-	email = cezary.skrzynski.ext@nokia.com
-	name = Cezary Skrzyński
+	email = some@mail.com
+	name = Some Guy
 [color]
 	ui = true
 [color "diff-highlight"]
