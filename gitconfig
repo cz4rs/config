@@ -1,0 +1,21 @@
+[http]
+[pager]
+    log = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less -r
+    show = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less -r
+    diff = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less -r
+[user]
+	email = cezary.skrzynski.ext@nokia.com
+	name = Cezary Skrzyński
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
