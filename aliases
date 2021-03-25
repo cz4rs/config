@@ -1,9 +1,24 @@
+alias dl="cd ~/Downloads"
+alias hosts='sudo vim /etc/hosts'
+alias f='fdfind'
+alias fd='fdfind'
 alias l='ls --color'
-alias ls='ls --color'
-alias ll='ls --color -lX'
 alias la='ls -Al'
-alias f='find . -name'
+alias ll='ls --color -lX'
+alias ls='ls --color'
+alias which='type -a'
 alias x=exit
 alias ..='cd ..'
+
+alias g="git"
 alias gamend="git commit -a --amend --no-edit && git push --force-with-lease"
+alias gg='git grep -in'
 alias glog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' -6"
+alias graph="git log --oneline --graph"
+alias greb="git pull --rebase origin develop"
+alias noedit="git commit -a --amend --no-edit"
+
+alias build-vt='CMAKE_BUILD_TYPE=Debug /home/cz4rs/nga/vt/ci/build_cpp.sh /home/cz4rs/nga/vt/ /home/cz4rs/nga/build_vt/'
+alias test-vt='/home/cz4rs/nga/vt/ci/test_cpp.sh /home/cz4rs/nga/vt/ /home/cz4rs/nga/build_vt/'
+alias build-checkpoint='GTEST_ROOT=/home/cz4rs/nga/vt/lib/googletest/build/install CMAKE_BUILD_TYPE=Debug /home/cz4rs/nga/vt/lib/checkpoint/ci/build_cpp.sh /home/cz4rs/nga/vt/lib/checkpoint/ /home/cz4rs/nga/vt/lib/checkpoint/build/'
+alias cmaked='/usr/bin/cmake --build /home/cz4rs/nga/vt/build --config Debug --target runtime_basic -- -j 10'
