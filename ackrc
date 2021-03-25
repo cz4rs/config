@@ -1,6 +1,0 @@
---type-set
-oam:ext:c,cc,cpp,h,hh,hpp,mk
---type-add
-oam:match:/makefile*/
-
---oam
