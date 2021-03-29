@@ -17,20 +17,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/cache@v2
-      with:
-        path: ~/.ccache
-        key: ${{ runner.os }}-macosx-clang-8-ccache-${{ secrets.GH_ACTIONS_CACHE_VERSION }}-${{ hashFiles('**/*') }}
-        restore-keys: |
-          ${{ runner.os }}-macosx-clang-8-ccache-${{ secrets.GH_ACTIONS_CACHE_VERSION }}
-    - uses: actions/cache@v2
       id: test-cache
       with:
-        path: ~/some.log
+        path: some.log
         key: ${{ runner.os }}-${{ hashFiles('**/.github/workflows/macosx-experimental.yml') }}
     - name: Generate file
       if: steps.test-cache.outputs.cache-hit != 'true'
       shell: bash
-      run: env | tee ~/some.log
+      run: env | tee some.log
     - name: Display file
       shell: bash
-      run: cat ~/some.log
+      run: cat some.log
