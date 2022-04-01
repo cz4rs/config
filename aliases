@@ -1,11 +1,11 @@
 alias dl="cd ~/Downloads"
+alias fakt="cd ~/Documents/faktury/2022"
 alias hosts='sudo vim /etc/hosts'
-alias f='fdfind'
-alias fd='fdfind'
 alias l='ls --color'
 alias la='ls -Al'
 alias ll='ls --color -lX'
 alias ls='ls --color'
+alias vim='vim -p'
 alias which='type -a'
 alias x=exit
 alias ..='cd ..'
@@ -13,6 +13,8 @@ alias ..='cd ..'
 alias g="git"
 alias gamend="git commit -a --amend --no-edit && git push --force-with-lease"
 alias gg='git grep -in'
+alias gche='git cherry-pick'
+alias glist='git stash list'
 alias glog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' -6"
 alias graph="git log --oneline --graph"
 alias greb="git pull --rebase origin develop"
@@ -22,3 +24,6 @@ alias build-vt='CMAKE_BUILD_TYPE=Debug /home/cz4rs/nga/vt/ci/build_cpp.sh /home/
 alias test-vt='/home/cz4rs/nga/vt/ci/test_cpp.sh /home/cz4rs/nga/vt/ /home/cz4rs/nga/build_vt/'
 alias build-checkpoint='GTEST_ROOT=/home/cz4rs/nga/vt/lib/googletest/build/install CMAKE_BUILD_TYPE=Debug /home/cz4rs/nga/vt/lib/checkpoint/ci/build_cpp.sh /home/cz4rs/nga/vt/lib/checkpoint/ /home/cz4rs/nga/vt/lib/checkpoint/build/'
 alias cmaked='/usr/bin/cmake --build /home/cz4rs/nga/vt/build --config Debug --target runtime_basic -- -j 10'
+
+#alias kokkos-check-format="CLANG_FORMAT_EXE=clang-format-8 ./scripts/docker/check_format_cpp.sh"
+alias kokkos-check-format="docker run -it -v /home/cz4rs/Kokkos/kokkos:/kokkos kokkos-format ./scripts/docker/check_format_cpp.sh"
