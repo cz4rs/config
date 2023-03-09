@@ -1,5 +1,5 @@
 alias dl="cd ~/Downloads"
-alias fakt="cd ~/Documents/faktury/2022"
+alias fakt="cd ~/Documents/faktury/2023"
 alias hosts='sudo vim /etc/hosts'
 alias l='ls --color'
 alias la='ls -Al'
