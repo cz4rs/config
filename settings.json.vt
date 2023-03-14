@@ -100,6 +100,7 @@
     "vt_zoltan_enabled": "0",
     "CMAKE_C_COMPILER_LAUNCHER": "ccache",
     "CMAKE_CXX_COMPILER_LAUNCHER": "ccache",
+    "CMAKE_CXX_STANDARD": "17",
     "CMAKE_EXPORT_COMPILE_COMMANDS": "1",
     "CMAKE_INSTALL_PREFIX": "/home/cz4rs/code/vt/build/install",
     "MPI_C_COMPILER": "mpicc",
