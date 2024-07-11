@@ -1,17 +1,23 @@
+HISTSIZE=100000
+HISTFILESIZE=100000
+
+alias ..='cd ..'
 alias dl="cd ~/Downloads"
-alias fakt="cd ~/Documents/faktury/2023"
+alias docs='cd ~/txt'
+alias fakt="cd ~/Documents/faktury/2024"
 alias hosts='sudo vim /etc/hosts'
-alias l='ls --color'
 alias la='ls -Al'
 alias ll='ls --color -lX'
+alias l='ls --color'
 alias ls='ls --color'
+alias lx='xdg-open .'
+alias var='vim ~/Documents/var.diff'
 alias vim='vim -p'
 alias which='type -a'
 alias x=exit
-alias ..='cd ..'
 
 alias g="git"
-alias gamend="git commit -a --amend --no-edit && git push --force-with-lease"
+alias gamend="git commit -a --amend --no-edit && git push --force-with-lease --force-if-includes"
 alias gg='git grep -in'
 alias gche='git cherry-pick'
 alias glist='git stash list'
