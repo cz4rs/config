@@ -18,11 +18,14 @@ alias x=exit
 
 alias g="git"
 alias gamend="git commit -a --amend --no-edit && git push --force-with-lease --force-if-includes"
-alias gg='[ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ] && git grep -in || rg -i'
 alias gche='git cherry-pick'
 alias glist='git stash list'
 alias glog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' -6"
 alias graph="git log --oneline --graph"
 alias greb="git pull --rebase origin develop"
 alias noedit="git commit -a --amend --no-edit"
+
+function gg() {
+    [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ] && git grep -in "$1" || rg -i "$1"
+}
 
