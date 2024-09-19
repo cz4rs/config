@@ -125,3 +125,8 @@ fun! ShowFuncName()
   call search("\\%" . lnum . "l" . "\\%" . col . "c")
 endfun
 map f :call ShowFuncName() <CR>
+
+syntax match Yellow /\[\d\+\]/
+
+highlight Yellow    cterm=bold   ctermfg=lightyellow
+
