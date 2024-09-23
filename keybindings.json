@@ -1,0 +1,11 @@
+    {
+        "key": "ctrl+`",
+        "command": "terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "terminalFocus"
+    },
+
