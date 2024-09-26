@@ -26,6 +26,6 @@ alias greb="git pull --rebase origin develop"
 alias noedit="git commit -a --amend --no-edit"
 
 function gg() {
-    [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ] && git grep -in "$1" || rg -i "$1"
+    [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ] && git grep -in "$@" || rg -i "$@"
 }
 
