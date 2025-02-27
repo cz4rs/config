@@ -1,25 +1,64 @@
 [user]
-    email       = xxx@yyy.com
-    name        = C
-    # signingKey = 123...
+    email = user@mail.com
+    name = My Name
+    signingKey = ASDF1234
 
 [alias]
-    # View the current working tree status using the short format
+    cpk = cherry-pick
+    dft = difftool
+    graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
     s = status -s
 
-    # Color graph log view
-    graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
+[branch]
+    sort = -committerdate
 
-[core]
-    excludesFile    = /home/xxx/.gitignore
-    editor          = vim
-	pager           = less -F -X
-    
-    commentChar     = auto
-    #commentChar    = @
+[column]
+    ui = auto
 
 [commit]
-    # gpgSign = true
+    gpgSign = true
+
+[core]
+    commentChar = @
+    #commentChar = auto
+    editor = vim
+    excludesFile = ~/.gitignore
+
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+    tool = difftastic
+
+[difftool]
+    prompt = false
+
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+
+[fetch]
+    all = true
+    prune = true
+    pruneTags = true
+
+[help]
+    autocorrect = prompt
+
+[init]
+    defaultBranch = main
+
+[pager]
+    difftool = true
 
 [pull]
     ff = only
+
+[push]
+    autoSetupRemote = true
+    default = simple
+    followTags = true
+
+[tag]
+    sort = version:refname
+
