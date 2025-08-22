@@ -2,16 +2,16 @@ HISTSIZE=100000
 HISTFILESIZE=100000
 
 alias ..='cd ..'
+alias bashrc='source ~/.bashrc'
 alias dl="cd ~/Downloads"
 alias docs='cd ~/txt'
-alias fakt="cd ~/Documents/faktury/2025"
 alias hosts='sudo vim /etc/hosts'
 alias la='ls -Alh'
 alias ll='ls --color -lX'
 alias l='ls --color'
 alias ls='ls --color'
 alias lx='xdg-open .'
-alias var='vim ~/Documents/var.diff'
+alias misc='vim ~/Documents/misc.diff'
 alias vim='vim -p'
 alias which='type -a'
 alias x=exit
@@ -24,6 +24,15 @@ alias glog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 alias graph="git log --oneline --graph"
 alias greb="git pull --rebase origin develop"
 alias noedit="git commit -a --amend --no-edit"
+
+function dlf() {
+    mv "$1" ~/Documents/faktury/"$(date -d "$D" '+%Y')/$(date -d "$D" '+%m')/$2"
+}
+
+function fakt() {
+    mkdir -p ~/Documents/faktury/"$(date -d "$D" '+%Y')/$(date -d "$D" '+%m')"
+    cd ~/Documents/faktury/"$(date -d "$D" '+%Y')/$(date -d "$D" '+%m')" || exit
+}
 
 function gg() {
     [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ] && git grep -in "$@" || rg -i "$@"
